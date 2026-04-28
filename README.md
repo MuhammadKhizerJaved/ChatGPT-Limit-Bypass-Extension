@@ -8,6 +8,10 @@ If you get the message:
 
 Simply load this extension in your browser!
 
+![Limit Message](LimitMessage.png)
+
+![ChatGPT Limit Bypass](ChatGPT%20Limit%20Bypass.png)
+
 ### Loading Steps:
 1. Download all the files and put them into a single folder.
 2. Open Chrome and go to `chrome://extensions/`.
