@@ -16,14 +16,31 @@ function unlockButton() {
     if (sendButton && sendButton.hasAttribute('disabled')) {
         sendButton.removeAttribute('disabled');
         
+        // Check if our indicator is already on the screen
         if (!document.getElementById('bypass-indicator')) {
             const indicator = document.createElement('div');
             indicator.id = 'bypass-indicator';
             indicator.innerText = '⚡ Bypass Active';
-            indicator.style.cssText = 'position: absolute; bottom: -20px; right: 0; font-size: 10px; color: #10a37f; font-weight: bold; pointer-events: none; white-space: nowrap;';
             
-            sendButton.parentElement.style.position = 'relative'; 
-            sendButton.parentElement.appendChild(indicator);
+            // THE FIX: Detached floating pill at the bottom of the screen
+            indicator.style.cssText = `
+                position: fixed; 
+                bottom: 20px; 
+                right: 20px; 
+                font-size: 12px; 
+                color: #10a37f; 
+                font-weight: bold; 
+                pointer-events: none; 
+                z-index: 999999; 
+                background-color: #202123; 
+                padding: 8px 14px; 
+                border-radius: 20px; 
+                border: 1px solid #10a37f; 
+                box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            `;
+            
+            // Attach it to the highest level of the page so it can't get trapped
+            document.body.appendChild(indicator);
         }
     }
 }
