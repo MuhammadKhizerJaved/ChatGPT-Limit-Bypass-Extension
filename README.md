@@ -12,6 +12,8 @@ Simply load this extension in your browser!
 
 ![ChatGPT Limit Bypass](ChatGPT%20Limit%20Bypass.png)
 
+![ChatGPT Limit Bypass](Bypass-Active.png)
+
 ### Loading Steps:
 1. Download all the files and put them into a single folder.
 2. Open Chrome and go to `chrome://extensions/`.
