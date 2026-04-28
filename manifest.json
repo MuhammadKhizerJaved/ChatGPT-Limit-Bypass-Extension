@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Limit Bypass",
+  "version": "1.0",
+  "description": "Bypasses the client-side UI lock and extracts wait time.",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["*://chatgpt.com/*"],
+  "icons": {
+    "16": "logo.png",
+    "32": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "logo.png",
+      "32": "logo.png",
+      "48": "logo.png",
+      "128": "logo.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://chatgpt.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
